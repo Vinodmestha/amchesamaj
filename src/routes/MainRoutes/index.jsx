@@ -1,7 +1,8 @@
 import React from "react";
 import { useRoutes, Outlet } from "react-router-dom";
+import PageRoutes from "./Pages";
 
 export default function MainRoutes(props) {
-    const routes = useRoutes([Outlet]);
-    return <div className="">Amche Samaj{routes}</div>;
+    const routes = useRoutes([{ path: "", element: <PageRoutes /> }, [Outlet]]);
+    return <div className="">{routes}</div>;
 }
